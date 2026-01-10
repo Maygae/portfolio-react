@@ -1,0 +1,354 @@
+/* ==================================================
+   Styles globaux
+================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #212529;
+  background-color: #ffffff;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* ==================================================
+   Hero (bandeau)
+================================================== */
+
+.hero {
+  position: relative;
+  min-height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Contenu du hero (texte + bouton) */
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-services {
+  min-height: 45vh;
+}
+
+/* ==================================================
+   Sections – titres & séparateurs
+================================================== */
+
+.services-header,
+.portfolio-header,
+.contact-header {
+  padding: 60px 20px 40px;
+  text-align: center;
+}
+
+.services-header h1,
+.portfolio-header h2,
+.contact-header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.services-header p,
+.portfolio-intro,
+.contact-intro {
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.services-separator {
+  width: 80px;
+  height: 3px;
+  background-color: #0d6efd;
+  margin: 0 auto;
+}
+
+/* ==================================================
+   Section Services
+================================================== */
+
+.services {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.service-card {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 4px;
+  border: 1px solid #eeeeee;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.service-card:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: #0d6efd;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #555555;
+}
+
+/* ==================================================
+   Section Portfolio
+================================================== */
+
+.portfolio {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* ==================================================
+   Section Contact
+================================================== */
+
+.contact {
+  padding: 60px 20px;
+  background-color: #f8f8f8;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.contact-form,
+.contact-infos {
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Formulaire */
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+  font: inherit;
+}
+
+/* Bouton contact */
+
+.contact-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e74c3c;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contact-button:hover {
+  background-color: #c0392b;
+}
+
+/* ==================================================
+   Footer
+================================================== */
+
+.site-footer {
+  background-color: #222222;
+  color: #ffffff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  max-width: 260px;
+}
+
+.footer-column h3 {
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 6px;
+}
+
+.footer-column a {
+  color: #bbbbbb;
+  text-decoration: none;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Réseaux sociaux */
+
+.footer-socials a {
+  font-size: 1.4rem;
+  color: #bbbbbb;
+  margin-right: 10px;
+  transition: color 0.2s ease;
+}
+
+.footer-socials a:hover {
+  color: #ffffff;
+}
+
+/* ==================================================
+   Navbar Bootstrap personnalisée
+================================================== */
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+}
+
+.navbar .nav-link {
+  color: #f5f5f5;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  background-color: #e74c3c;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* ==================================================
+   Modale GitHub
+================================================== */
+
+.modal-backdrop-custom {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+.modal-github {
+  background: #212529;
+  color: #f8f9fa;
+  max-width: 800px;
+  width: 95%;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-github-header-bar {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #343a40;
+}
+
+.modal-github-body {
+  padding: 1rem;
+}
+
+.modal-github-footer {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #343a40;
+}
+
+/* ==================================================
+   Responsive
+================================================== */
+
+@media (max-width: 900px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-header h1 {
+    font-size: 1.9rem;
+  }
+}
