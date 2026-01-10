@@ -1,6 +1,6 @@
 // src/pages/Home.jsx
 import React, { useEffect, useState } from "react";
-import "../App.css";
+import "../styles/App.css";
 import heroBg from "../assets/images/hero-bg.jpg";
 import aboutImg from "../assets/images/john-doe-about.jpg";
 
